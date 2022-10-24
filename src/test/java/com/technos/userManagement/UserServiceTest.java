@@ -94,14 +94,4 @@ class UserServiceTest {
         assertEquals(stringResponseEntity.getStatusCode(), userService.addUser(user).getStatusCode());
     }
 
-    @Test
-    void testDuoDigits() {
-        Set<Integer> set= new HashSet<>();
-        int[] digits = Integer.toString(Math.abs(-2021)).chars().map(c -> c-'0').toArray();
-        for(int i:digits){
-            set.add(i);
-        }
-        System.out.println(set);
-    }
-    
 }
